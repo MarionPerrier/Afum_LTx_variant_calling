@@ -70,7 +70,7 @@ gatk --java-options "-Xmx4g" GenotypeGVCFs \
 	-O $FOLDER/08_genotypeVCF/mito.vcf.gz \
 	--tmp-dir $FOLDER/08_genotypeVCF/tmp
 else
-singularity run --bind /vast/fu46von:/vast/fu46von docker://broadinstitute/gatk:latest \
+singularity run $IMG \
 gatk --java-options "-Xmx4g" GenotypeGVCFs \
 	-R $REF \
 	-V gendb://$FOLDER/07_GenomicsDBImport/Chr${SLURM_ARRAY_TASK_ID} \
