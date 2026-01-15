@@ -1,5 +1,5 @@
-# Prevalence, resistance patterns and genomic profiles of azole-resistant Aspergillus fumigatus in patients with cystic fibrosis and lung transplantation, Germany, 2008-2022
-Repository sharing codes used for the Scharmann et al. 2026 paper "Prevalence, resistance patterns and genomic profiles of azole-resistant Aspergillus fumigatus in patients with cystic fibrosis and lung transplantation, Germany, 2008-2022".
+# Prevalence, resistance patterns and genomic profiles of azole-resistant *Aspergillus fumigatus* in patients with cystic fibrosis and lung transplantation, Germany, 2008-2022
+Repository sharing codes used for the manuscript by Scharmann et al. entitled "Prevalence, resistance patterns and genomic profiles of azole-resistant *Aspergillus fumigatus* in patients with cystic fibrosis and lung transplantation, Germany, 2008-2022".
 
 This pipeline is made in bash, and is intended to be run on a SLURM HPC. This repository is made for reproducibility of the paper's results only.
 
