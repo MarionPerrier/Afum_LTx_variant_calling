@@ -4,8 +4,8 @@ library(phangorn) #this is for midpoint
 setwd("~/Documents/20240815_collab_jorge/")
 
 #load data
-annot_table <- read.csv("20251110_manuscript/Afum_LTx_variant_calling/03_Rscript/annotation_table.csv")
-ploidy1 <- read.newick("20251110_manuscript/Afum_LTx_variant_calling/03_Rscript/noDP0.treefile")
+annot_table <- read.csv("annotation_table.csv")
+ploidy1 <- read.newick("noDP0.treefile")
 
 #Change the names for their corresponding short ID "Isolate_[number]"
 ploidy1 = rename_taxa(ploidy1, annot_table, rawID, isolateID)
@@ -32,7 +32,7 @@ p4 %<+% annot_table[-c(1:2)] +
   theme(legend.text=element_text(size=12),
         legend.title=element_text(size=14))+
   ggplot2::xlim(0, 0.8)
-ggsave("tree_midpoint_corrected_scaled_full_revision_noH.png", width=25, height=20, units="cm", limitsize=FALSE)
+ggsave("tree_midpoint_corrected_scaled_full_revision.png", width=25, height=20, units="cm", limitsize=FALSE)
 
 
 #plot tree without the 4 samples TR34/L98H
@@ -52,4 +52,4 @@ p4 %<+% annot_table[-c(1:2)] +
   theme(legend.text=element_text(size=12),
         legend.title=element_text(size=14))+
   ggplot2::xlim(0, 0.8)
-ggsave("tree_midpoint_corrected_scaled_filtered_revision_noH.png", width=25, height=20, units="cm", limitsize=FALSE)
+ggsave("tree_midpoint_corrected_scaled_filtered_revision.png", width=25, height=20, units="cm", limitsize=FALSE)

@@ -7,7 +7,7 @@ library(patchwork)  #
 library(cowplot)
 library(reshape2)
 
-snpdist_matrix <- read.table("20251110_manuscript/Afum_LTx_variant_calling/03_Rscript/snpdist_matrix.tsv", sep="\t", header=T, row.names = 1)
+snpdist_matrix <- read.table("snpdist_matrix.tsv", sep="\t", header=T, row.names = 1)
 
 snpdist_matrix[lower.tri(snpdist_matrix, diag = TRUE)] <- NA
 # Melt and remove NAs
