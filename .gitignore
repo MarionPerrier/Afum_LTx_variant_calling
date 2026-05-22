@@ -1,0 +1,6 @@
+01_variant_calling/cohort.p1.sample_map
+01_variant_calling/input.list
+03_Rscript/annotation_table.csv
+03_Rscript/noDP0.treefile
+03_Rscript/snpdist_matrix.tsv
+03_Rscript/.Rhistory

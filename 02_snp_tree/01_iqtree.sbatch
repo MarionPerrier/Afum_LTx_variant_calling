@@ -50,7 +50,7 @@ iqtree2 \
     -s $FOLDER/13_snpTree/samples.noDP0.snp.min4.fasta \
     -B 1000 \
     -m MFP+ASC+R \
-	-st DNA \
+    -st DNA \
     --mem 50G \
     --verbose \
     -nt AUTO

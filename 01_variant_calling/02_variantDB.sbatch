@@ -36,8 +36,8 @@ mkdir -p $FOLDER/07_GenomicsDBImport/tmp
 if [ $SLURM_ARRAY_TASK_ID -eq 9 ]; then
 singularity run $IMG \
 gatk --java-options "-Xmx4g -Xms4g" GenomicsDBImport \
-	--genomicsdb-workspace-path mito \
-	--sample-name-map $FOLDER/07_GenomicsDBImport/cohort.p1.sample_map \
+	--genomicsdb-workspace-path $FOLDER/07_GenomicsDBImport/mito \
+	--sample-name-map $FOLDER/cohort.p1.sample_map \
 	--tmp-dir $FOLDER/07_GenomicsDBImport/tmp \
 	--genomicsdb-shared-posixfs-optimizations \
 	--reader-threads 2 \
@@ -47,8 +47,8 @@ else
 
 singularity run $IMG \
 gatk --java-options "-Xmx4g -Xms4g" GenomicsDBImport \
-	--genomicsdb-workspace-path Chr${SLURM_ARRAY_TASK_ID} \
-	--sample-name-map $FOLDER/07_GenomicsDBImport/cohort.p1.sample_map \
+	--genomicsdb-workspace-path $FOLDER/07_GenomicsDBImport/Chr${SLURM_ARRAY_TASK_ID} \
+	--sample-name-map $FOLDER/cohort.p1.sample_map \
 	--tmp-dir $FOLDER/07_GenomicsDBImport/tmp \
 	--genomicsdb-shared-posixfs-optimizations \
 	--reader-threads 2 \

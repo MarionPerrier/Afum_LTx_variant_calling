@@ -80,7 +80,6 @@ mamba activate bwamem2
 
 bwa-mem2 mem \
 	-t 12 \
-	-M \
 	-R $(echo "@RG\tID:$SAMPLE\tLB:$SAMPLE\tPL:ILLUMINA\tSM:$SAMPLE") \
 	-o $FOLDER/03_align/$SAMPLE.sam \
 	~/references/bwa_mem/Af293_fungiDB/Af293_fungiDB \
@@ -102,8 +101,6 @@ fi
 ###########################
 {
 if [ ! -f $FOLDER/04_markDuplicates/$SAMPLE\_markDup.bam ]; then
-
-#singuliarty image on broadinstitute/gatk:latest
 
 singularity run $IMG \
 gatk MarkDuplicatesSpark \
